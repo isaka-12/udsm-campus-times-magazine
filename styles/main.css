@@ -1,0 +1,53 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/* Ensure content is not hidden behind sticky navbar */
+body {
+    padding-top: 0;
+}
+
+/* Main content wrapper */
+.main-content {
+    min-height: calc(100vh - 400px);
+    padding: var(--spacing-lg);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-md);
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: var(--spacing-sm);
+    }
+    
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+}

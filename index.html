@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Times Magazine</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/landing.css">
+    
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Campus Times Magazine</h1>
+            <p class="hero-subtitle">Your Voice, Your Stories, Your Campus</p>
+            <p class="hero-description">Discover the latest news, events, and inspiring stories from the University of Dar es Salaam community</p>
+            <div class="hero-buttons">
+                <a href="#latest-articles" class="btn btn-primary">Read Latest Articles</a>
+                <a href="pages/about.html" class="btn btn-secondary">About Us</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main-content" id="latest-articles">
+        
+        <!-- Featured Articles Section -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Stories</h2>
+                    <p>Spotlight on the most impactful stories from our campus</p>
+                </div>
+                <div class="featured-grid">
+                    <article class="featured-card featured-card-large">
+                        <div class="card-image">
+                            <img src="assets/library.png" alt="Featured Article">
+                            <span class="card-badge">Featured</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-tag"></i> Education</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 20, 2025</span>
+                            </div>
+                            <h3>UDSM Launches New Innovation Hub for Student Entrepreneurs</h3>
+                            <p>The university unveils a state-of-the-art innovation center designed to foster entrepreneurship and technological advancement among students.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="card-image">
+                            <img src="assets/library.png" alt="Article">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-tag"></i> Technology</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 19, 2025</span>
+                            </div>
+                            <h3>Students Develop AI-Powered Learning Platform</h3>
+                            <p>A team of computer science students creates an innovative tool to enhance online learning experiences.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="card-image">
+                            <img src="assets/library.png" alt="Article">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-tag"></i> Sports</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 18, 2025</span>
+                            </div>
+                            <h3>UDSM Football Team Wins Inter-University Championship</h3>
+                            <p>Our talented athletes bring home the trophy after an intense final match against Sokoine University.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore Categories</h2>
+                    <p>Browse articles by topic</p>
+                </div>
+                <div class="categories-grid">
+                    <a href="pages/technology.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Technology</h3>
+                        <p>Latest in tech and innovation</p>
+                    </a>
+                    <a href="pages/sports.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Sports</h3>
+                        <p>Athletics and competitions</p>
+                    </a>
+                    <a href="pages/education.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Education</h3>
+                        <p>Academic news and insights</p>
+                    </a>
+                    <a href="pages/entertainment.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-music"></i></div>
+                        <h3>Entertainment</h3>
+                        <p>Arts, culture, and events</p>
+                    </a>
+                    <a href="pages/health.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Health</h3>
+                        <p>Wellness and lifestyle</p>
+                    </a>
+                    <a href="pages/campus-events.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Campus Events</h3>
+                        <p>Upcoming activities</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Section -->
+        <section class="articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Articles</h2>
+                    <p>Stay updated with recent campus news</p>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Education</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>New Research Grant Awarded to Engineering Department</h4>
+                            <p class="article-excerpt">The department receives funding to advance renewable energy research projects.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> John Doe</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Student Life</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Student Organization Launches Community Outreach Program</h4>
+                            <p class="article-excerpt">Students bring educational resources to underprivileged communities.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Jane Smith</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Technology</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Hackathon 2025: Students Showcase Innovative Solutions</h4>
+                            <p class="article-excerpt">Annual coding competition highlights creativity and technical skills.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Mike Johnson</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Health</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Campus Health Center Introduces Mental Wellness Programs</h4>
+                            <p class="article-excerpt">New initiatives aim to support student mental health and wellbeing.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Sarah Williams</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 3 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Sports</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Women's Basketball Team Advances to National Finals</h4>
+                            <p class="article-excerpt">Undefeated season leads team to compete for the championship title.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> David Brown</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="assets/library.png" alt="Article">
+                            <span class="article-category">Opinion</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>The Future of Education: A Student's Perspective</h4>
+                            <p class="article-excerpt">Exploring how technology is reshaping learning experiences on campus.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Emily Davis</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="load-more">
+                    <button class="btn btn-primary">Load More Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-newspaper"></i></div>
+                        <h3 class="stat-number">500+</h3>
+                        <p class="stat-label">Articles Published</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="stat-number">10K+</h3>
+                        <p class="stat-label">Active Readers</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-pen"></i></div>
+                        <h3 class="stat-number">50+</h3>
+                        <p class="stat-label">Contributing Writers</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar"></i></div>
+                        <h3 class="stat-number">100+</h3>
+                        <p class="stat-label">Events Covered</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Stay Connected</h2>
+                        <p>Subscribe to our newsletter and never miss an update from Campus Times Magazine</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- JavaScript -->
+    <script src="scripts/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Academic Blue and Gold Color Variables - Light Theme */
+:root {
+    /* Primary Colors */
+    --academic-blue: #0336a3;
+    --academic-gold: #FFB800;
+    
+    /* Secondary Colors */
+    --light-blue: #E8F1F8;
+    --dark-blue: #012A5E;
+    --light-gold: #FFF5DC;
+    --dark-gold: #CC9400;
+    
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --gray: #CCCCCC;
+    --dark-gray: #666666;
+    --black: #000000;
+    
+    /* Hover States */
+    --gold-hover: #FFC700;
+    --blue-hover: #004080;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Typography */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+}
