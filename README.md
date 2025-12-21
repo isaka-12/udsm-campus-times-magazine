@@ -67,17 +67,7 @@ var(--light-blue)
    ```
 
 2. **Open with a local server**
-   
-   Using Python:
-   ```bash
-   python -m http.server 8000
-   ```
-   
-   Using Node.js (with http-server):
-   ```bash
-   npx http-server
-   ```
-   
+     
    Using VS Code Live Server:
    - Install Live Server extension
    - Right-click on `index.html` and select "Open with Live Server"
