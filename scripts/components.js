@@ -42,6 +42,9 @@ function initializeNavbar() {
     // Fix navbar links based on current location
     fixNavbarLinks();
     
+    // Fix navbar logo path
+    fixNavbarLogo();
+    
     const navbarToggle = document.querySelector('.navbar-toggle');
     const navbarMenu = document.querySelector('.navbar-menu');
     
@@ -94,6 +97,21 @@ function fixNavbarLinks() {
         }
         // If we're in root, links are already correct
     });
+}
+
+// Fix navbar logo path based on current page location
+function fixNavbarLogo() {
+    const currentPath = window.location.pathname;
+    const isInPagesFolder = currentPath.includes('/pages/');
+    const logo = document.querySelector('.navbar-logo');
+    
+    if (logo && isInPagesFolder) {
+        const currentSrc = logo.getAttribute('src');
+        // If logo path doesn't already start with ../, add it
+        if (!currentSrc.startsWith('../')) {
+            logo.setAttribute('src', '../' + currentSrc);
+        }
+    }
 }
 // Initialize sticky navigation behavior
 function initializeStickyNav() {
