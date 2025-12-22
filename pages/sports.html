@@ -3,79 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports - Campus Times Magazine</title>
+    <title>Campus Times | Sports</title>
     
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="../styles/variables.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
-    <link rel="stylesheet" href="../styles/page-content.css">
+    <link rel="stylesheet" href="../styles/hero.css">
+    <link rel="stylesheet" href="../styles/landing.css">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #f7f9fb;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        /* Responsive image */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Featured Section Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+        }
+        .featured-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+        .featured-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .featured-card-large {
+            grid-row: span 2;
+            grid-column: 1 / 2;
+        }
+        .card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative; /* Ensure badge is positioned relative to image */
+        }
+        .featured-card-large .card-image {
+            aspect-ratio: 16/9;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #1e90ff;
+            color: #fff;
+            font-size: 0.85rem;
+            padding: 0.3em 0.9em;
+            border-radius: 1em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(30,144,255,0.12);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .card-content {
+            padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .card-meta {
+            display: flex;
+            gap: 1.2rem;
+            color: #6c7a89;
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+        }
+        .read-more {
+            color: #1e90ff;
+            font-weight: 600;
+            margin-top: 0.7rem;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .read-more:hover {
+            color: #0a5bb5;
+        }
+        /* Articles Section */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.18s, transform 0.18s;
+        }
+        .article-card:hover {
+            box-shadow: 0 6px 24px rgba(30,144,255,0.13);
+            transform: translateY(-4px) scale(1.01);
+        }
+        .article-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative; /* Ensure badge is positioned relative to image */
+        }
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .article-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #1e90ff;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 0.3em 0.9em;
+            border-radius: 1em;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(30,144,255,0.10);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .article-content {
+            padding: 1rem 1.2rem 1.3rem 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .article-footer {
+            display: flex;
+            gap: 1.2rem;
+            color: #6c7a89;
+            font-size: 0.92rem;
+            margin-top: 0.7rem;
+        }
+        .load-more {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+        }
+        /* Responsive grid for featured and articles */
+        .featured-grid, .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .featured-card-large {
+            grid-column: span 2;
+        }
+        @media (max-width: 1100px) {
+            .featured-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: minmax(320px, auto);
+            }
+            .featured-card-large {
+                grid-row: span 1;
+                grid-column: 1 / -1;
+            }
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            .featured-grid, .articles-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .featured-card-large {
+                grid-column: span 2;
+            }
+            .coict-results {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.2rem 0.7rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 0.2rem;
+            }
+            .featured-grid, .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .featured-card-large {
+                grid-column: span 1;
+            }
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+            .section-header h2 {
+                font-size: 1.3rem;
+            }
+            .card-content, .article-content {
+                padding: 0.8rem 0.7rem 1rem 0.7rem;
+            }
+            .coict-results {
+                padding: 0.7rem 0.2rem;
+            }
+        }
+        /* Responsive coict-results section */
+        .coict-results {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            background: #f0f4fa;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            margin: 2.5rem 0 2rem 0;
+        }
+        .coict-image {
+            flex: 1 1 0;
+            min-width: 220px;
+            max-width: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .coict-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(30,144,255,0.10);
+        }
+        .coict-text {
+            flex: 2 1 0;
+        }
+        @media (max-width: 900px) {
+            .coict-results {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        /* Responsive hero section */
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+        }
+        /* Responsive card content */
+        .featured-card, .article-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .card-image, .article-image {
+            width: 100%;
+            overflow: hidden;
+        }
+        .card-image img, .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .card-content, .article-content {
+            padding: 1rem;
+        }
+        .load-more {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
     
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="page-header">
-            <h1><i class="fas fa-trophy"></i> Sports</h1>
-            <p>Athletics and competitions at UDSM</p>
-        </div>
-        
+    <!-- Main Sports Content -->
+    <main class="main-content" id="latest-articles">
         <div class="container">
-            <!-- Featured Article -->
-            <article class="featured-article">
-                <div class="featured-article-image">
-                    <img src="../assets/library.png" alt="UDSM Sports">
-                    <span class="featured-badge">Featured</span>
+            <!-- Featured Sports Story -->
+            <section class="featured-section" id="featured">
+                <div class="section-header">
+                    <h2>Featured Sports Story</h2>
+                    <p>Highlights and in-depth coverage from campus competitions</p>
                 </div>
-                <div class="featured-article-content">
-                    <div class="featured-article-meta">
-                        <span><i class="fas fa-calendar"></i> December 19, 2025</span>
-                        <span><i class="fas fa-user"></i> Sports Desk</span>
-                        <span><i class="fas fa-eye"></i> 2,145 views</span>
-                    </div>
-                    <h2>UDSM Football Team Wins Inter-University Championship</h2>
-                    <p>In an exciting final match, the University of Dar es Salaam football team emerged victorious in the annual Inter-University Sports Championship, defeating their rivals 3-1. The team's outstanding performance throughout the tournament showcased exceptional skill, teamwork, and determination.</p>
-                    <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                <div class="featured-grid">
+                    <article class="featured-card featured-card-large">
+                        <div class="card-image">
+                            <img src="../assets/coict-bonanza.jpeg" alt="CoICT Tournament Standings">
+                            <span class="card-badge">CoICT Tournament</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-trophy"></i> Sports</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 21, 2025</span>
+                            </div>
+                            <h3>CoICT Tournament: Final Standings and Match Highlights</h3>
+                            <p>The College of Information and Communication Technologies wrapped up a competitive tournament this week. See the final standings, key match results, and top performers from the event.</p>
+                            <a href="#coict-details" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="card-image">
+                            <img src="../assets/ceit-win.jpeg" alt="Article">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-futbol"></i> Football</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 18, 2025</span>
+                            </div>
+                            <h3>A Massive win for CEIT Third Year</h3>
+                            <p>CEIT Third Year secured a stunning victory in their group-stage match against EE First Year, showcasing exceptional teamwork and skill.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="card-image">
+                            <img src="../assets/azizi.jpeg" alt="Article">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="category"><i class="fas fa-basketball-ball"></i> Football</span>
+                                <span class="date"><i class="fas fa-calendar"></i> Dec 17, 2025</span>
+                            </div>
+                            <h3>Abdulazizi Calls for Fans to support CEIT 3rd Year</h3>
+                            <p>Captain Abdulazizi urged fans to rally behind CEIT Third Year, emphasizing the team's dedication and potential for future success.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
                 </div>
-            </article>
+            </section>
 
-            <!-- Other Articles -->
-            <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-card-image">
-                        <img src="../assets/library.png" alt="Basketball">
+            <!-- CoICT Tournament Details Anchor -->
+            <section class="article-detail" id="coict-details">
+                <div class="section-header">
+                    <h2>CoICT Tournament Results</h2>
+                    <p>A detailed look at results, standings and standout players from the tournament.</p>
+                </div>
+                <div class="coict-results">
+                    <div class="coict-image">
+                        <img src="../assets/coict-bonanza.jpeg" alt="CoICT tournament standings table">
                     </div>
-                    <div class="article-card-content">
-                        <div class="article-card-meta">
-                            <span><i class="fas fa-calendar"></i> December 17, 2025</span>
-                            <span><i class="fas fa-user"></i> Michael Juma</span>
-                        </div>
-                        <h3>Women's Basketball Team Prepares for Regional Tournament</h3>
-                        <p>The UDSM women's basketball team is intensifying training as they prepare to represent Tanzania in the upcoming East African University Games.</p>
-                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    <div class="coict-text">
+                        <h3>Final Standings</h3>
+                        <p>The tournament featured teams from across the College. Below are the top highlights:</p>
+                        <ul>
+                            <li>Team 1 Year finished top of the table with 9 points after three matches.</li>
+                            <li>CEIT 3 Year and BIT 3 Year secured strong performances and placed near the top of the standings.</li>
+                            <li>Individual awards include top scorer and best goalkeeper—congratulations to the winners.</li>
+                        </ul>
+                        <p>For the full match-by-match breakdown and scorelines, refer to the standings image above.</p>
                     </div>
-                </article>
+                </div>
+            </section>
 
-                <article class="article-card">
-                    <div class="article-card-image">
-                        <img src="../assets/library.png" alt="Athletics">
-                    </div>
-                    <div class="article-card-content">
-                        <div class="article-card-meta">
-                            <span><i class="fas fa-calendar"></i> December 14, 2025</span>
-                            <span><i class="fas fa-user"></i> Grace Moshi</span>
+            <!-- Latest Sports Articles -->
+            <section class="articles-section">
+                <div class="section-header">
+                    <h2>Latest Sports Articles</h2>
+                    <p>Recent match reports, interviews and results</p>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="../assets/mantra.jpeg" alt="Article">
+                            <span class="article-category">Football</span>
                         </div>
-                        <h3>Annual Sports Gala Showcases Student Talent</h3>
-                        <p>The university's sports gala brought together athletes from various disciplines for a celebration of sportsmanship and competitive excellence.</p>
-                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
+                        <div class="article-content">
+                            <h4>Last Minute Winner Sends Team to Finals</h4>
+                            <p class="article-excerpt">A dramatic stoppage-time goal settled an epic semi-final clash at the CoICT grounds.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Reporter</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 3 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="../assets/motm.jpeg" alt="Article">
+                            <span class="article-category">Basketball</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Top Performer of the Match: Player Spotlight</h4>
+                            <p class="article-excerpt">An interview with the player of the match about preparation and teamwork.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Sports Desk</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="../assets/ceit.jpeg" alt="Article">
+                            <span class="article-category">Campus Events</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Community Sports Day Recap</h4>
+                            <p class="article-excerpt">A summary of the community outreach sports activities held alongside the main tournament.</p>
+                            <div class="article-footer">
+                                <span class="author"><i class="fas fa-user"></i> Campus Times</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 2 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="load-more">
+                    <button class="btn btn-primary">Load More Articles</button>
+                </div>
+            </section>
         </div>
     </main>
     
@@ -86,3 +464,4 @@
     <script src="../scripts/components.js"></script>
 </body>
 </html>
+
