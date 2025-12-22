@@ -149,9 +149,9 @@ Add this script tag before the closing `</body>` tag (adjust path based on locat
     <title>Your Page Title</title>
     
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -321,7 +321,63 @@ Edit `pages/footer.html` to customize footer sections, links, and social media:
 - **Desktop**: > 768px (full navigation menu)
 - **Mobile**: ≤ 768px (hamburger menu)
 
+## Contributing & Git Workflow
 
+Follow these steps to collaborate on the project using Git and GitHub:
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/isaka-12/udsm-campus-times-magazine.git
+cd udsm-campus-times-magazine
+```
+
+### Step 2: Create a Branch
+
+Create a new branch using your name and the page you're working on:
+
+```bash
+git checkout -b yourname-yourpage
+```
+
+**Example:**
+```bash
+git checkout -b isaka-technology
+```
+
+### Step 3: Create Your Page
+
+1. Create a page inside the **`pages/`** folder using the **feature name** (e.g., `technology.html`) in your preferred code editor
+2. **Edit only your assigned HTML file**
+3. Use the reusable component structure (see [Using Reusable Components](#using-reusable-components))
+
+### Step 4: Commit and Push Your Changes
+
+```bash
+# Add your changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Add [your page name] page"
+
+# Push to your branch
+git push origin yourname-yourpage
+```
+
+### Step 5: Create a Pull Request
+
+1. Go to the GitHub repository
+2. Click "Pull Requests" → "New Pull Request"
+3. Select your branch and create the PR
+4. Wait for review and approval
+
+### Important Rules
+
+- ⚠️ **Only edit your assigned page**
+- ✅ Always work on your own branch
+- 🔄 Pull latest changes before starting: `git pull origin main`
+- 📝 Write clear commit messages
+- 🧪 Test your page locally before pushing
 
 ## License
 

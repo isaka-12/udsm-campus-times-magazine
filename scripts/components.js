@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (navbarPlaceholder) {
                 navbarPlaceholder.innerHTML = data;
                 initializeNavbar();
+                initializeStickyNav();
             }
         })
         .catch(error => console.error('Error loading navbar:', error));
@@ -94,7 +95,34 @@ function fixNavbarLinks() {
         // If we're in root, links are already correct
     });
 }
-
+// Initialize sticky navigation behavior
+function initializeStickyNav() {
+    const navLinksWrapper = document.querySelector('.navbar-links-wrapper');
+    const navBrandWrapper = document.querySelector('.navbar-brand-wrapper');
+    
+    if (!navLinksWrapper || !navBrandWrapper) {
+        console.log('Nav wrappers not found');
+        return;
+    }
+    
+    // Get the offset position where nav should become fixed
+    const navOffset = navBrandWrapper.offsetHeight;
+    
+    console.log('Sticky nav initialized, offset:', navOffset);
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > navOffset) {
+            navLinksWrapper.classList.add('fixed');
+            navLinksWrapper.classList.add('scrolled');
+            // Add padding to body to prevent content jump
+            document.body.style.paddingTop = navLinksWrapper.offsetHeight + 'px';
+        } else {
+            navLinksWrapper.classList.remove('fixed');
+            navLinksWrapper.classList.remove('scrolled');
+            document.body.style.paddingTop = '0';
+        }
+    });
+}
 // Fix footer links based on current page location
 function fixFooterLinks() {
     const currentPath = window.location.pathname;

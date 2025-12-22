@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--black);
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 /* Ensure content is not hidden behind sticky navbar */
