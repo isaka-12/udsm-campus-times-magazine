@@ -5,6 +5,7 @@
     color: var(--white);
     padding: var(--spacing-xl) 0;
     text-align: center;
+    color: var(--dark-gray);
     margin-bottom: var(--spacing-xl);
 }
 
