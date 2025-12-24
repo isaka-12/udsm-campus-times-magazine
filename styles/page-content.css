@@ -3,8 +3,9 @@
 .page-header {
     background: linear-gradient(135deg, var(--academic-blue) 0%, var(--secondary-blue) 100%);
     color: var(--white);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-l) 0;
     text-align: center;
+    color: var(--dark-gray);
     margin-bottom: var(--spacing-xl);
 }
 
@@ -49,6 +50,15 @@
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+/* custom only for Health Page: Start.. */
+.health-image{
+    object-position: top center;
+    max-height: fit-content;
+}
+.image-card{
+    height: 400px;
+}
+/*  custom only for Health Page: End..  */
 
 .featured-article:hover .featured-article-image img {
     transform: scale(1.05);
