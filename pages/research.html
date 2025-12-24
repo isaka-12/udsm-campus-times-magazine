@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/page-content.css">
+    <link rel="stylesheet" href="../styles/research.css">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,62 +21,493 @@
     
     <!-- Main Content -->
     <main class="main-content">
-        <div class="page-header">
-            <h1><i class="fas fa-flask"></i> Research & Innovation</h1>
-            <p>Cutting-edge research and innovative projects at UDSM</p>
+        <div class="page-header research-hero">
+            <div class="hero-image-container">
+                <img src="../assets/research/SIDA.jpg" alt="UDSM Research" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-text-content">
+                <h1><i class="fas fa-flask"></i> Research & Innovation at UDSM</h1>
+                <p>Advancing Knowledge, Transforming Lives Through Research Excellence</p>
+            </div>
         </div>
         
         <div class="container">
-            <!-- Featured Article -->
-            <article class="featured-article">
-                <div class="featured-article-image">
-                    <img src="../assets/library.png" alt="UDSM Research">
-                    <span class="featured-badge">Featured</span>
+            
+            <!-- Research Overview -->
+            <section class="research-overview">
+                <div class="overview-intro">
+                    <p class="lead-paragraph">
+                        The University of Dar es Salaam (UDSM) is actively engaged in a wide array of research projects aimed at addressing critical societal needs and contributing to global knowledge. UDSM's research initiatives are organized through various colleges, schools, and specialized research centers, reflecting the university's comprehensive approach to research and innovation.
+                    </p>
                 </div>
-                <div class="featured-article-content">
-                    <div class="featured-article-meta">
-                        <span><i class="fas fa-calendar"></i> December 21, 2025</span>
-                        <span><i class="fas fa-user"></i> Research Team</span>
-                        <span><i class="fas fa-eye"></i> 2,987 views</span>
+                
+                <!-- Research Stats -->
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="stat-number">64</div>
+                        <div class="stat-label">PhD Students</div>
                     </div>
-                    <h2>UDSM Researchers Breakthrough in Malaria Treatment</h2>
-                    <p>A team of researchers from the University of Dar es Salaam has made a significant breakthrough in malaria treatment, developing a novel approach that shows promising results in clinical trials. This groundbreaking research, conducted in collaboration with international partners, could revolutionize malaria treatment across Africa and save millions of lives.</p>
-                    <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-number">36</div>
+                        <div class="stat-label">Masters Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-microscope"></i></div>
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Postdocs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-university"></i></div>
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Partner Institutions</div>
+                    </div>
                 </div>
-            </article>
+            </section>
 
-            <!-- Other Articles -->
-            <div class="articles-grid">
-                <article class="article-card">
-                    <div class="article-card-image">
-                        <img src="../assets/library.png" alt="Climate Research">
-                    </div>
-                    <div class="article-card-content">
-                        <div class="article-card-meta">
-                            <span><i class="fas fa-calendar"></i> December 18, 2025</span>
-                            <span><i class="fas fa-user"></i> Prof. John Mwanza</span>
-                        </div>
-                        <h3>Climate Change Study Reveals Impact on Coastal Communities</h3>
-                        <p>New research from UDSM's environmental science department provides critical insights into how climate change affects Tanzania's coastal regions.</p>
-                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
+            <!-- Research Cooperations -->
+            <section class="research-section">
+                <div class="section-title">
+                    <h2><i class="fas fa-handshake"></i> Research Cooperations</h2>
+                    <p>Strategic partnerships driving innovation and sustainable development</p>
+                </div>
 
-                <article class="article-card">
-                    <div class="article-card-image">
-                        <img src="../assets/library.png" alt="Innovation Hub">
+                <!-- UDSM-Sida Cooperation Programme -->
+                <div class="cooperation-block">
+                    <div class="cooperation-header clickable" onclick="toggleCooperationContent(this)">
+                        <h3>UDSM - Sida Cooperation Programme</h3>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
                     </div>
-                    <div class="article-card-content">
-                        <div class="article-card-meta">
-                            <span><i class="fas fa-calendar"></i> December 15, 2025</span>
-                            <span><i class="fas fa-user"></i> Innovation Lab</span>
+                    <div class="cooperation-content">
+                        <p>The UDSM is guided by its Vision 2061 to its rightful role in facilitating the BRN. As part of that effort, this proposal was developed in response to the Sida call of August 2014 for enhancing Tanzania-Sweden research partnerships 2015-2020 and is aimed at facilitating the UDSM aspirations "Towards Enhanced Sustainability of Strategic Research and Innovation Systems for Inclusive Development in Tanzania."</p>
+                        
+                        <p>Taking full advantage of the various achievements from earlier support from Sida and other development partners, the overall objective is to generate sufficient analytical capacity and research-based knowledge and technological innovations with appropriate and immediate valuable outcomes to relevant stakeholders (policymakers, industry, civil society, etc.) in addressing the problem of poverty and promoting sustainable and inclusive development.</p>
+                        
+                        <!-- Sustainability Box -->
+                        <div class="info-highlight-box">
+                            <h4><i class="fas fa-seedling"></i> Sustainability Measures</h4>
+                            <p>Sustainability measures include the enhancements of analytical capacities (through the training of 64 PhDs, 36 Masters, and 20 Postdocs) and research environment (via the establishment of 3 new research centres and strengthening 2 existing ones) for driver sector research. With UDSM outputs eventually feeding into the Tanzania University Network, the proposed capacity strengthening measures would also improve our youth participation at higher levels of education (especially for females), hence improve the percentage of highly skilled workers that so far are insufficient (3%).</p>
                         </div>
-                        <h3>Student Innovation Hub Receives International Recognition</h3>
-                        <p>UDSM's innovation hub has been recognized globally for fostering entrepreneurship and supporting student-led technological innovations.</p>
-                        <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+
+                        <!-- Swedish Partners -->
+                        <div class="partners-section">
+                            <h4><i class="fas fa-globe"></i> Swedish Partner Institutions</h4>
+                            <div class="partners-list">
+                                <span class="partner-tag">Stockholm University</span>
+                                <span class="partner-tag">Swedish University of Agricultural Sciences</span>
+                                <span class="partner-tag">Chalmers University of Technology</span>
+                                <span class="partner-tag">University of Uppsala</span>
+                                <span class="partner-tag">University of Skövde</span>
+                                <span class="partner-tag">University of Gothenburg</span>
+                                <span class="partner-tag">Royal Institute of Technology</span>
+                                <span class="partner-tag">Lund University</span>
+                                <span class="partner-tag">Linköping University</span>
+                                <span class="partner-tag">Mälardalen University</span>
+                            </div>
+                        </div>
+
+                        <!-- Research Programmes -->
+                        <div class="programmes-wrapper">
+                            <h4><i class="fas fa-project-diagram"></i> Research Programmes</h4>
+                            <p class="programmes-description">The programme consists of 12 sub-programmes, 10 of which are research programmes and 2 are supporting programmes focused on strengthening research management and access to research information at UDSM.</p>
+                            
+                            <div class="programmes-grid">
+                                <!-- Programme 1 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-fish"></i></div>
+                                    <h5>Marine Sciences Programme</h5>
+                                    <p>Addresses problems of over-harvesting, declining fish stocks and diversity, and environmental changes.</p>
+                                    <button class="expand-btn" onclick="toggleProgrammeDetails(this)">
+                                        <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="programme-details">
+                                        <p>Researchers work in close collaboration with the local communities of fisher folks and their emerging enterprises will address the unavailability of reliable seed, lack of genetic management and poor hatchery procedures thus degrading the performance of farmed species through inbreeding, genetic drift and uncontrolled hybridization. They also intend to assess and recommend technologies suitable for maintaining the integrity of biologically rich environments and minimize impacts, reduce post-harvest losses, assess and recommend legal and policy environment to promote ecosystem approach to fisheries management and aquaculture development.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Programme 2 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-wheat-awn"></i></div>
+                                    <h5>The Food Security Programme</h5>
+                                    <p>Multidisciplinary approach focusing on agroforestry, peri-urban agriculture, and crop breeding.</p>
+                                    <button class="expand-btn" onclick="toggleProgrammeDetails(this)">
+                                        <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="programme-details">
+                                        <p>With a multidisciplinary approach, focuses on research in agroforestry, peri-urban agriculture, crop breeding, diseases control, dairy farming and environmental management for improved Food Security.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Programme 3 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-dna"></i></div>
+                                    <h5>Molecular Bioscience Programme</h5>
+                                    <p>Develops cost-effective diagnostics and uses natural products for new drug development.</p>
+                                    <button class="expand-btn" onclick="toggleProgrammeDetails(this)">
+                                        <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="programme-details">
+                                        <p>Attempts to develop cost-effective diagnostics and use plant and microbial natural products for development of new drugs to combat non-communicative diseases as well as contributing to food security by training researchers in mushrooms endophytic fungi and lichens in strong public-private partnership bringing discovery to the industry.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Programme 4 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-bolt"></i></div>
+                                    <h5>iGRID Research Training Programme</h5>
+                                    <p>Focused on smart grid technologies and sustainable energy solutions.</p>
+                                </div>
+
+                                <!-- Programme 5 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-venus"></i></div>
+                                    <h5>ENGAGE Programme</h5>
+                                    <p>Engendering Agribusiness Entrepreneurship for inclusive development.</p>
+                                </div>
+
+                                <!-- Programme 6 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-tint"></i></div>
+                                    <h5>DAFWAT Programme</h5>
+                                    <p>Research initiatives focused on water and agricultural technologies.</p>
+                                </div>
+
+                                <!-- Programme 7 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-water"></i></div>
+                                    <h5>Sustainable Water Management Programme</h5>
+                                    <p>Addressing water resource management and sustainability challenges.</p>
+                                </div>
+
+                                <!-- Programme 8 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-calculator"></i></div>
+                                    <h5>Mathematics in Higher Learning Education Programme</h5>
+                                    <p>Increasing competence in Mathematics at Higher Education level in Tanzania.</p>
+                                    <button class="expand-btn" onclick="toggleProgrammeDetails(this)">
+                                        <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="programme-details">
+                                        <p>Addresses the general need for increased competence in Mathematics at a general level in Tanzania, but with focus on Higher Education (HE). Basic Science, Technology and Innovation (BSTI) play a major role in the socio-economic development of any country. Capacity building of human resource in BSTI is therefore vital. The advancement of BSTI and related research highly depends on mathematical knowledge and competencies in problem solving.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Programme 9 -->
+                                <div class="programme-item">
+                                    <div class="programme-icon-circle"><i class="fas fa-plane"></i></div>
+                                    <h5>Innovative and Sustainable Tourism</h5>
+                                    <p>Research on sustainability of natural and cultural tourism resources.</p>
+                                    <button class="expand-btn" onclick="toggleProgrammeDetails(this)">
+                                        <span>Learn More</span> <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="programme-details">
+                                        <p>Will carry out research on: (1) the sustainability of natural and cultural tourism resources for inclusive development; (2) community involvement in the country's tourism planning and policies and their influence on local content strategies, green growth and innovations; (3) innovations and entrepreneurship in the private sector in tourism as pathways to sustainable growth and inclusive development; and (4) Tourism resource efficiency, social inclusiveness and conservation for economic growth.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </article>
-            </div>
+                </div>
+
+            </section>
+
+            <!-- Research Groups & Active Projects -->
+            <section class="research-section department-research">
+                <div class="section-title">
+                    <h2><i class="fas fa-project-diagram"></i> Research Groups & Active Projects</h2>
+                    <p>Innovative research initiatives across UDSM departments</p>
+                </div>
+
+                <!-- ISDI Research Group -->
+                <div class="research-group-card">
+                    <div class="group-header-banner">
+                        <div class="group-icon-large"><i class="fas fa-network-wired"></i></div>
+                        <div class="group-header-text">
+                            <h3>Information Systems and Digital Innovations (ISDI)</h3>
+                            <p>ICT-related research and applications</p>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <p class="group-intro">Information Systems and Digital Innovations research group (ISDIRG) deals with ICT-related research and its application in various sectors such as Health, Business, Water, Road Safety, Agriculture, etc. Innovation is also an important emerging field as organisations are increasingly dependent on ICT to improve operations, facilitate processes and gain competitive advantages.</p>
+                        
+                        <div class="research-focus">
+                            <h4><i class="fas fa-search"></i> Research Areas</h4>
+                            <div class="research-areas-list">
+                                <div class="area-item">
+                                    <strong>Design:</strong> Addressing challenges in architectural design, interface design, organizational designs, user participation, and their influence in IS implementation.
+                                </div>
+                                <div class="area-item">
+                                    <strong>Implementation:</strong> Issues related to scaling up of Information Systems, integration, mobilization, and interdependencies of actors.
+                                </div>
+                                <div class="area-item">
+                                    <strong>Users:</strong> System use evaluations and user satisfaction.
+                                </div>
+                                <div class="area-item">
+                                    <strong>Connectedness:</strong> Understanding information systems using theoretical lenses like Information Infrastructures, Digital Platforms, and ICT Ecosystems.
+                                </div>
+                                <div class="area-item">
+                                    <strong>IS Evidence:</strong> Search for evidence of value added by information systems implementation to application domains.
+                                </div>
+                                <div class="area-item">
+                                    <strong>Organizational Change:</strong> Focus on organizational changes and system thinking approach in IS implementations and the role of IS projects in facilitating change.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="members-section">
+                            <h4><i class="fas fa-users"></i> Group Members</h4>
+                            <div class="members-tags">
+                                <span class="member-tag">Dr Honest Kimaro</span>
+                                <span class="member-tag">Dr Mathew Mndeme</span>
+                                <span class="member-tag">Dr Masoud Mahundi</span>
+                                <span class="member-tag">Dr Salome Maro</span>
+                                <span class="member-tag">Dr Ruthbetha Kateule</span>
+                                <span class="member-tag">Dr Leonard Peter</span>
+                                <span class="member-tag">Dr Wilfred Senyoni</span>
+                                <span class="member-tag">Dr Jimmy Mbelwa</span>
+                                <span class="member-tag">Ms Betty Mbwilo</span>
+                            </div>
+                        </div>
+
+                        <div class="phd-section">
+                            <h4><i class="fas fa-user-graduate"></i> PhD Research Students</h4>
+                            <ul>
+                                <li>Mr Emmanuel Budigila (MSc & BSc, UDSM)</li>
+                                <li>Mr Eaton Lambert Okello (MSc & BSc, Makerere)</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-section">
+                            <h4><i class="fas fa-envelope"></i> Management & Contact</h4>
+                            <div class="contact-grid">
+                                <div class="contact-box">
+                                    <p><strong>Dr Mathew Mndeme</strong> - Co-coordinator</p>
+                                    <p><i class="fas fa-envelope"></i> mathewmndeme@udsm.ac.tz</p>
+                                    <p><i class="fas fa-phone"></i> +255 788 835 883</p>
+                                </div>
+                                <div class="contact-box">
+                                    <p><strong>Dr Masoud Mahundi</strong> - Co-coordinator</p>
+                                    <p><i class="fas fa-envelope"></i> mmahundi97@gmail.com</p>
+                                    <p><i class="fas fa-phone"></i> +255 713 832 252</p>
+                                </div>
+                            </div>
+                            <p class="meeting-note"><i class="fas fa-calendar-check"></i> Weekly meetings - Contact coordinators for schedule and venue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Engineering Research Group -->
+                <div class="research-group-card">
+                    <div class="group-header-banner">
+                        <div class="group-icon-large"><i class="fas fa-code"></i></div>
+                        <div class="group-header-text">
+                            <h3>Software Engineering (SE) Research Group</h3>
+                            <p>Cutting edge research and innovation in Software Engineering</p>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <p class="group-intro">The Software Engineering research group conducts cutting edge research and innovation in Software Engineering, focusing on national, regional, and global Software Engineering problems. Apart from theoretical aspects of Software Engineering, the group has special interests in practical challenges facing software engineers in the industry.</p>
+                        
+                        <div class="meeting-info-box">
+                            <p><i class="fas fa-clock"></i> <strong>Group Meetings:</strong> Every Friday from 12:00 PM to 1:00 PM</p>
+                            <p><i class="fas fa-presentation"></i> Research seminars and PG presentations every other Friday</p>
+                        </div>
+
+                        <div class="research-focus">
+                            <h4><i class="fas fa-search"></i> Research Focus Areas</h4>
+                            <div class="focus-tags">
+                                <span class="focus-tag">AI and Machine Learning in SE</span>
+                                <span class="focus-tag">Software Testing & Program Analysis</span>
+                                <span class="focus-tag">Empirical Software Engineering</span>
+                                <span class="focus-tag">Software Maintenance & Evolution</span>
+                                <span class="focus-tag">Social Aspects of SE</span>
+                                <span class="focus-tag">Requirements, Modeling and Design</span>
+                                <span class="focus-tag">Software Security</span>
+                                <span class="focus-tag">Mobile Applications</span>
+                                <span class="focus-tag">Embedded Systems & IoT</span>
+                            </div>
+                        </div>
+
+                        <div class="members-section">
+                            <h4><i class="fas fa-users"></i> Group Members</h4>
+                            <div class="members-tags">
+                                <span class="member-tag leadership">Dr Godfrey Justo Njulumi (Chairperson)</span>
+                                <span class="member-tag leadership">Dr Leonard Peter Binamungu (Coordinator)</span>
+                                <span class="member-tag leadership">Dr Ruthbertha Kateule (Coordinator)</span>
+                                <span class="member-tag">Dr Salome Maro</span>
+                                <span class="member-tag">Dr Juma Lungo</span>
+                                <span class="member-tag">Dr Mathew Mndeme</span>
+                                <span class="member-tag">Dr James Chambua</span>
+                                <span class="member-tag">Dr Jimmy Mbelwa</span>
+                                <span class="member-tag">Ms Betty Mbilo</span>
+                                <span class="member-tag">Mr Alex Kivaisi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iGRID Project -->
+                <div class="research-group-card project-highlight">
+                    <div class="project-image-header">
+                        <img src="../assets/research/iGRID.png" alt="iGRID Project">
+                        <div class="project-image-overlay">
+                            <div class="group-icon-large"><i class="fas fa-solar-panel"></i></div>
+                            <div class="group-header-text">
+                                <h3>iGRID Project</h3>
+                                <p>Smart Autonomous Microgrid Development</p>
+                            </div>
+                            <span class="project-label">Active Project</span>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <p class="group-intro">The iGRID Research Project is focused on different aspects that enable smart autonomous microgrids. Researchers at different levels are working on developing solar-based power solutions that are more efficient, reliable and autonomous than existing solutions.</p>
+                        
+                        <div class="project-scope-box">
+                            <h4><i class="fas fa-bullseye"></i> Project Scope</h4>
+                            <p>Development of smart autonomous microgrid systems capable of serving off-grid communities of 10-100 households with 48V DC solar-driven power that can be integrated into high voltage AC/DC main grid when available.</p>
+                        </div>
+
+                        <div class="research-focus">
+                            <h4><i class="fas fa-search"></i> Research Focus</h4>
+                            <div class="focus-areas-detailed">
+                                <div class="focus-detail-item">
+                                    <div class="focus-icon"><i class="fas fa-robot"></i></div>
+                                    <div>
+                                        <h5>Agent-based Power Control</h5>
+                                        <p>Deploying smart microgrid with autonomous distributed system using agent-based distributed control for solar systems integration. Focus on IoT through provision of solar driven DC microgrid of up to 48V DC.</p>
+                                    </div>
+                                </div>
+                                <div class="focus-detail-item">
+                                    <div class="focus-icon"><i class="fas fa-wifi"></i></div>
+                                    <div>
+                                        <h5>IoT-based Communication</h5>
+                                        <p>Designing and implementing secure and robust communication systems based on IoT technologies to support smart 48V DC solar-driven microgrids, enabling efficient power distribution management.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-info">
+                            <h4><i class="fas fa-users"></i> Project Team</h4>
+                            <p>The iGRID research team consists of MSc, PhD and Post Doc researchers from The Royal Institute of Technology (KTH) in Sweden and The University of Dar-es-Salaam in Tanzania.</p>
+                        </div>
+
+                        <div class="leadership-info">
+                            <h4><i class="fas fa-user-tie"></i> Project Leadership</h4>
+                            <p><strong>Prof Nerrey Mvungi</strong> - Project Manager and Principal Investigator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Y4C Innovation Hub -->
+                <div class="research-group-card project-highlight">
+                    <div class="project-image-header">
+                        <img src="../assets/research/Y4C.jpg" alt="Y4C Innovation Hub">
+                        <div class="project-image-overlay">
+                            <div class="group-icon-large"><i class="fas fa-lightbulb"></i></div>
+                            <div class="group-header-text">
+                                <h3>Youth For Children (Y4C) Innovation Hub</h3>
+                                <p>Promoting child rights and youth innovation</p>
+                            </div>
+                            <span class="project-label partner">UNICEF Partnership</span>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <p class="group-intro">The Youth For Children (Y4C) Innovation Hub is a convening and training space to promote child rights and invest in open innovation by young people that contribute to the achievement of the Sustainable Development Goals.</p>
+                        
+                        <div class="hub-features">
+                            <h4><i class="fas fa-tools"></i> Hub Features</h4>
+                            <ul>
+                                <li>Technological resources and equipment</li>
+                                <li>Design workshops and training programs</li>
+                                <li>Skill-based seminars</li>
+                                <li>Leadership and innovation capacity building for young people in Tanzania</li>
+                            </ul>
+                        </div>
+
+                        <div class="partnership-box">
+                            <h4><i class="fas fa-handshake"></i> Partnership</h4>
+                            <p>The Y4C hub is housed at the University of Dar es Salaam College of ICT and was established in collaboration between UDSM and UNICEF Tanzania.</p>
+                        </div>
+
+                        <div class="team-info">
+                            <h4><i class="fas fa-users"></i> Team Composition</h4>
+                            <p>The project includes students and several CoICT lecturers serving as mentors.</p>
+                        </div>
+
+                        <div class="leadership-info">
+                            <h4><i class="fas fa-user-tie"></i> Principal Investigator</h4>
+                            <p><strong>Dr Hellen Maziku</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEDICATED Project -->
+                <div class="research-group-card project-highlight">
+                    <div class="project-image-header">
+                        <img src="../assets/research/DEDICATED.png" alt="DEDICATED Project">
+                        <div class="project-image-overlay">
+                            <div class="group-icon-large"><i class="fas fa-heartbeat"></i></div>
+                            <div class="group-header-text">
+                                <h3>DEDICATED Project</h3>
+                                <p>Health Information Systems and Health Informatics</p>
+                            </div>
+                            <span class="project-label international">International Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <p class="group-intro">The research project "Developing EDucation with Input from CoordinATED research students (DEDICATED)" is a joint collaborative project funded by Norwegian Directorate for Higher Education and Skills through Norwegian Partnership Programme for Global Academic Cooperation (NORPART). It focuses on building capacity in Health Information Systems (HIS) and Health Informatics (HI) within the partner countries.</p>
+                        
+                        <div class="partners-section">
+                            <h4><i class="fas fa-globe"></i> Partner Institutions</h4>
+                            <div class="partners-list">
+                                <span class="partner-tag">University of Dar es Salaam (UDSM) - Tanzania</span>
+                                <span class="partner-tag">University of Oslo (UiO) - Norway</span>
+                                <span class="partner-tag">University of Malawi (UNIMA) - Malawi</span>
+                                <span class="partner-tag">University of Eduardo Mondlane (UEM) - Mozambique</span>
+                            </div>
+                        </div>
+
+                        <div class="team-info">
+                            <h4><i class="fas fa-users"></i> UDSM DHIS2 Lab Team</h4>
+                            <div class="team-members-list">
+                                <div class="team-member-item">
+                                    <p><strong>Dr Honest C. Kimaro</strong></p>
+                                    <p class="role-text">Principal Investigator & Project Coordinator</p>
+                                </div>
+                                <div class="team-member-item">
+                                    <p><strong>Dr Jimmy T. Mbelwa</strong></p>
+                                    <p class="role-text">Co-Principal Investigator & Project Administrator</p>
+                                </div>
+                                <div class="team-member-item">
+                                    <p><strong>Dr Masoud H. Mahundi</strong></p>
+                                    <p class="role-text">Co-Principal Investigator</p>
+                                </div>
+                                <div class="team-member-item">
+                                    <p><strong>Dr Wilfred F. Senyoni</strong></p>
+                                    <p class="role-text">Co-Principal Investigator</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <div class="cta-content-wrapper">
+                    <h2><i class="fas fa-rocket"></i> Get Involved in Research</h2>
+                    <p>Are you interested in contributing to cutting-edge research at UDSM? Join our research community and make an impact on society.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="read-more-btn">Contact Research Office</a>
+                        <a href="#" class="read-more-btn secondary">View Open Positions</a>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </main>
     
@@ -84,5 +516,6 @@
     
     <!-- JavaScript -->
     <script src="../scripts/components.js"></script>
+    <script src="../scripts/research.js"></script>
 </body>
 </html>
