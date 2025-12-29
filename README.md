@@ -1,6 +1,6 @@
 # Campus Times Magazine - UDSM
 
-Campus Times Magazine is a group project done as part of software engineering assignment to learn collaboration using git and github. This is a modern, responsive web magazine featuring campus news, events, and student stories with an academic blue and gold color scheme.
+Campus Times Magazine is a group project done as part of software engineering assignment to learn collaboration using git and github. 
 
 ## About the Project
 
@@ -14,12 +14,12 @@ This project is part of a software engineering assignment at the University of D
 - John Marandu.
 - Vistar Lyimo.
 - Brian Kimwaga.
-- BENJAMIN MASHIMBA.
-- HENDRICK MARTIN.
-- MASOUD MASOUD.
-- KHAYYAM M. HABIB.
+- Benjamin Mashimba.
+- Hendrick Martin.
+- Masoud Masoud.
+- Khayyam M. Habib.
 
+<!-- quotation -->
 
-
-
+> This project is live at: [https://campus-times.netlify.app/](https://campus-times.netlify.app/)
 
