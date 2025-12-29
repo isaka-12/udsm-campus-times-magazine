@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Campus Times Magazine</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/page-content.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .about-hero {
+            background: var(--academic-blue);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--academic-gold);
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        .about-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            color: var(--academic-blue);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--academic-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .about-section p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: var(--academic-blue);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member .icon {
+            font-size: 3rem;
+            color: var(--academic-gold);
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--academic-gold);
+        }
+
+        .team-member .role {
+            font-size: 0.9rem;
+            color: var(--light-gold);
+            font-weight: 500;
+        }
+
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .objectives-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid var(--academic-gold);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .objectives-list li i {
+            color: var(--academic-blue);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <h1>About Campus Times Magazine</h1>
+        <p>A collaborative project by UDSM students, showcasing the power of teamwork and modern web development</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="about-content">
+        <!-- Why We Made This Section -->
+        <section class="about-section">
+            <h2>Why We Made This Project</h2>
+            <p>
+                Campus Times Magazine was created as part of a Software Engineering assignment at the University of Dar es Salaam (UDSM). 
+                The primary goal of this project is to learn and practice collaborative software development using Git and GitHub.
+            </p>
+            <p>
+                Through this project, we aim to develop essential skills in version control, team collaboration, code review, 
+                and modern web development practices. By building a real-world web magazine, we gain hands-on experience in 
+                creating responsive, user-friendly web applications while learning to work effectively as a development team.
+            </p>
+            
+            <h3 style="color: var(--academic-blue); margin-top: 2rem; margin-bottom: 1rem;">Project Objectives</h3>
+            <ul class="objectives-list">
+                <li>
+                    <i class="fas fa-code-branch"></i>
+                    <span>Master Git and GitHub for version control and collaboration</span>
+                </li>
+                <li>
+                    <i class="fas fa-users"></i>
+                    <span>Practice team-based software development workflows</span>
+                </li>
+                <li>
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Build a modern, responsive web application</span>
+                </li>
+                <li>
+                    <i class="fas fa-book"></i>
+                    <span>Learn best practices in HTML, CSS, and JavaScript</span>
+                </li>
+                <li>
+                    <i class="fas fa-comments"></i>
+                    <span>Develop effective communication and project management skills</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Team Members Section -->
+        <section class="about-section">
+            <h2>Meet Our Team</h2>
+            <p>
+                Our team consists of dedicated Computer Science students from UDSM, working together to create 
+                this dynamic campus magazine platform. Each member has contributed their unique skills and perspectives 
+                to bring this project to life.
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Isaka Mtweve</h3>
+                    <p class="role">Group Leader</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Abdulazizi Masolwa</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Hope Japhet</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>John Marandu</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Vistar Lyimo</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Brian Kimwaga</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Benjamin Mashimba</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Hendrick Martin</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Masoud Masoud</h3>
+                    <p class="role">Team Member</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                    <h3>Khayyam M. Habib</h3>
+                    <p class="role">Team Member</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- JavaScript -->
+    <script src="../scripts/components.js"></script>
+</body>
+</html>

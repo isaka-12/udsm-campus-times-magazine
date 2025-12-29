@@ -10,8 +10,7 @@
 }
 
 .navbar-brand {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: var(--spacing-xs) var(--spacing-md);
     display: flex;
     align-items: center;
@@ -67,8 +66,7 @@
 }
 
 .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 var(--spacing-md);
     display: flex;
     justify-content: space-between;
@@ -96,14 +94,17 @@
 .navbar-menu {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .navbar-nav {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
-    gap: var(--spacing-xs);
+    padding: 8px 0;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .navbar-nav li {
@@ -176,7 +177,7 @@
     .navbar-nav {
         flex-direction: column;
         gap: 0;
-        padding: var(--spacing-sm) 0;
+        padding: var(--spacing-md) 0;
     }
     
     .navbar-nav a {
