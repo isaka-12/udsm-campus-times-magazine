@@ -19,20 +19,85 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Campus Times Magazine</h1>
-            <p class="hero-subtitle">Your Voice, Your Stories, Your Campus</p>
-            <p class="hero-description">Discover the latest news, events, and inspiring stories from the University of Dar es Salaam community</p>
-            <div class="hero-buttons">
-                <a href="#latest-articles" class="btn btn-primary">Read Latest Articles</a>
-                <a href="pages/about.html" class="btn btn-secondary">About Us</a>
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slide 1 - Lindi Campus -->
+            <div class="carousel-slide active">
+                <img src="https://www.udsm.ac.tz/sites/default/files/gallery-article/IMG_1627.JPG" alt="UDSM Lindi Campus">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="carousel-badge">Breaking News</span>
+                    <h2>UDSM Expands to Lindi: New Campus Opens in Southern Tanzania</h2>
+                    <p>Prime Minister Dr. Mwigulu Nchemba lays foundation stone for transformative agriculture-led development initiative</p>
+                    <a href="pages/campus-events.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Slide 2 - AI Technology -->
+            <div class="carousel-slide">
+                <img src="assets/Technology/ai-lab-udsm.jpg" alt="AI Research at UDSM">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="carousel-badge">Technology</span>
+                    <h2>Artificial Intelligence Becomes Core Skill for ICT Students</h2>
+                    <p>Students applying machine learning and automation in final-year projects at CoICT</p>
+                    <a href="pages/technology.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Slide 3 - Mental Health -->
+            <div class="carousel-slide">
+                <img src="assets/healthLanding.jpeg" alt="Mental Health Initiative">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="carousel-badge">Health & Wellness</span>
+                    <h2>UDSM Launches Mental Health Support Initiative</h2>
+                    <p>Comprehensive program includes counseling services and stress management workshops</p>
+                    <a href="pages/health.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Slide 4 - Research -->
+            <div class="carousel-slide">
+                <img src="assets/research/SIDA.jpg" alt="UDSM Research">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="carousel-badge">Research</span>
+                    <h2>Research & Innovation at UDSM</h2>
+                    <p>Addressing critical societal needs and contributing to global knowledge</p>
+                    <a href="pages/research.html" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            
+            <!-- Slide 5 - Sports -->
+            <div class="carousel-slide">
+                <img src="assets/coict-bonanza.jpeg" alt="CoICT Sports Tournament">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="carousel-badge">Sports</span>
+                    <h2>CoICT Tournament: Final Standings and Match Highlights</h2>
+                    <p>The College of Information and Communication Technologies wrapped up a competitive tournament this week</p>
+                    <a href="pages/sports.html" class="btn btn-primary">Read More</a>
+                </div>
             </div>
         </div>
-        <div class="hero-scroll">
-            <i class="fas fa-chevron-down"></i>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Dots Indicator -->
+        <div class="carousel-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
         </div>
     </section>
     
@@ -286,5 +351,90 @@
     
     <!-- JavaScript -->
     <script src="scripts/components.js"></script>
+    <script>
+        // Hero Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+        let autoPlayInterval;
+
+        function showSlide(index) {
+            // Remove active class from all slides and dots
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Handle wrap around
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            
+            // Add active class to current slide and dot
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Event Listeners
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay(); // Restart autoplay after manual interaction
+        });
+
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                stopAutoPlay();
+                startAutoPlay();
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            }
+        });
+
+        // Pause autoplay on hover
+        document.querySelector('.hero-carousel').addEventListener('mouseenter', stopAutoPlay);
+        document.querySelector('.hero-carousel').addEventListener('mouseleave', startAutoPlay);
+
+        // Start autoplay
+        startAutoPlay();
+    </script>
 </body>
 </html>

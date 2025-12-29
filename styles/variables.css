@@ -1,12 +1,12 @@
 /* Academic Blue and Gold Color Variables - Light Theme */
 :root {
     /* Primary Colors */
-    --academic-blue: #0336a3;
+    --academic-blue: #0864af;
     --academic-gold: #FFB800;
     
     /* Secondary Colors */
     --light-blue: #E8F1F8;
-    --dark-blue: #012A5E;
+    --dark-blue: #054a7f;
     --light-gold: #FFF5DC;
     --dark-gold: #CC9400;
     
@@ -19,7 +19,7 @@
     
     /* Hover States */
     --gold-hover: #FFC700;
-    --blue-hover: #004080;
+    --blue-hover: #225dcd;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
